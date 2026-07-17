@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shutterguard — 隱私檢查輔助工具</title>
+<meta name="description" content="Shutterguard 是一款完全在本機運作的隱私檢查輔助工具，協助你在飯店、更衣間、公共廁所等場域檢查可疑物件。所有資料只存在你的手機，永不上傳。">
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang TC", "Helvetica Neue", system-ui, sans-serif;
+    line-height: 1.7; margin: 0; color: #1c1c1e; background: #fff;
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e5e5ea; background: #000; }
+    a { color: #6ca8ff; }
+    .card { background: #1c1c1e !important; border-color: #333 !important; }
+    .disclaimer { background: #1c1c1e !important; border-color: #3a3a3c !important; }
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 20px 80px; }
+  header { text-align: center; margin-bottom: 40px; }
+  h1 { font-size: 2rem; margin: 0 0 8px; letter-spacing: -.02em; }
+  .tagline { color: #8e8e93; font-size: 1.1rem; margin: 0; }
+  h2 { font-size: 1.15rem; margin: 40px 0 12px; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+  @media (max-width: 540px) { .cards { grid-template-columns: 1fr; } }
+  .card { background: #f5f5f7; border: 1px solid #e5e5ea; border-radius: 14px; padding: 16px 18px; }
+  .card h3 { margin: 0 0 4px; font-size: 1rem; }
+  .card p { margin: 0; font-size: .92rem; color: #636366; }
+  @media (prefers-color-scheme: dark) { .card p { color: #aeaeb2; } }
+  .disclaimer { background: #fff8e6; border: 1px solid #f0e0b0; border-radius: 12px; padding: 16px 18px; font-size: .92rem; margin: 28px 0; }
+  ul { padding-left: 1.2em; }
+  li { margin: 5px 0; }
+  a { color: #0066cc; }
+  .links { margin-top: 12px; }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid #e5e5ea; font-size: .85rem; color: #8e8e93; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Shutterguard</h1>
+    <p class="tagline">完全本機運作的隱私檢查輔助工具</p>
+  </header>
+
+  <p>Shutterguard 協助你在進入飯店、更衣間、醫美診所、公共廁所隔間等陌生空間前，快速檢查可能藏匿針孔的可疑物件。工具完全在 iPhone 本機運作，<strong>不會將任何掃描資料、影像或裝置清單上傳到任何伺服器</strong>。</p>
+
+  <div class="disclaimer">
+    <strong>重要：</strong>Shutterguard 是<strong>輔助性</strong>的隱私檢查工具，無法保證偵測所有偷拍裝置。分數高不代表「一定有偷拍機」，分數低也不代表「絕對安全」。若有具體疑慮，請立即報警（110）。
+  </div>
+
+  <h2>它怎麼運作</h2>
+  <div class="cards">
+    <div class="card"><h3>鏡頭反光</h3><p>用閃光燈拍開燈／關燈兩張照片相減，找出像鏡頭反光的小亮點。</p></div>
+    <div class="card"><h3>藍牙裝置</h3><p>掃描周圍 BLE 裝置，過濾已知良性裝置後標記可疑訊號。</p></div>
+    <div class="card"><h3>磁場異常</h3><p>用磁力計建立環境基準，偵測偏離基準的磁場變化作交叉參考。</p></div>
+    <div class="card"><h3>紅外線光點</h3><p>全暗環境下用前鏡頭找夜視攝影機的紅外補光點（也可能是遙控器等良性來源）。</p></div>
+    <div class="card"><h3>Pro 進階兩項</h3><p>環境異音（17–22 kHz 超音波）與 Wi-Fi 網段（mDNS 服務探索），Pro 版另解鎖。</p></div>
+    <div class="card"><h3>規則全公開</h3><p>app 內完整列出每一種方法的演算法、計分公式與常見誤報原因。</p></div>
+  </div>
+
+  <h2>隱私設計</h2>
+  <ul>
+    <li>完全本機運作，永不上傳任何掃描資料</li>
+    <li>歷史紀錄以 iOS Data Protection 加密，裝置鎖屏即不可讀</li>
+    <li>無第三方 SDK、無廣告、無 analytics 追蹤</li>
+  </ul>
+
+  <h2>支援與聯絡</h2>
+  <p>使用上有任何問題或回饋：</p>
+  <ul class="links">
+    <li>Email：<a href="mailto:ym90039@gmail.com">ym90039@gmail.com</a></li>
+    <li>問題回報：<a href="https://github.com/Lawliet0813/shutterguard/issues">GitHub Issues</a></li>
+    <li><a href="./privacy.html">隱私政策</a></li>
+  </ul>
+
+  <footer>
+    © 2026 Shutterguard ・ 由獨立開發者於台灣製作 ・ <a href="./privacy.html">Privacy Policy</a>
+  </footer>
+</div>
+</body>
+</html>
